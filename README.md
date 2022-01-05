@@ -119,7 +119,7 @@ start the app
 ------------
 ng serve 
 
-Hostimg on Firebase
+Hosting on Firebase
 --------------------
 1. Change ng build 
    Edit angular.json and change the following 
@@ -128,6 +128,7 @@ Hostimg on Firebase
           "options": {
             "outputPath": "dist/angular-fire-auth",   ------->  change this to "outputPath": "dist"
 2. At project root - create the firebase hosting. 
+   > npm install firebase-tools -g
    > firebase login
    > firebase init hosting
    > ng build 
