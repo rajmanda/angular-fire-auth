@@ -10,9 +10,7 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth/";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatButtonModule } from '@angular/material/button';
-
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
     AngularFireAuthModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatSliderModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
