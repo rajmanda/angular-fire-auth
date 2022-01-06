@@ -134,3 +134,22 @@ Hosting on Firebase
    > ng build 
    > firebase deploy --only hosting
    > open the hosting site.
+
+Adding ng-material
+--------------------
+Step 1 : ng add @angular/material
+Step 2 : import UI Component Module in app.module.ts ( import { MatButtonModule } from '@angular/material/button'; ) 
+Step 3 : Add the module to imports in app.module.ts 
+
+     imports: [
+        BrowserModule,
+        AppRoutingModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireAuthModule,
+        AngularFirestoreModule,
+        BrowserAnimationsModule,
+        MatButtonModule,                  <-----
+        MatSliderModule                   <-----
+    ],
+Step 4 : Use the module in the code.  
+    <button (click)="login()" mat-raised-button color="primary">Login with Google</button>     
