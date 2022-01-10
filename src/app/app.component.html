@@ -4,6 +4,17 @@
 </div>
 <ng-template #showLogin>
   <p>Please login.</p>
-  <button (click)="login()" mat-raised-button color="primary">Login with Google</button>
   <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
 </ng-template>
+<mat-toolbar color="primary" class="navbar">
+  <div> Track Your Properties </div>
+  <div>
+    <span> Home  </span>
+    <span> About </span>
+    <span> Services </span>
+    <span *ngIf="auth.user"> {{auth.user}}
+       <button (click)="login()" mat-raised-button color="primary">Login with Google</button>
+    </span>
+
+  </div>
+</mat-toolbar>

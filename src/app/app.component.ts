@@ -10,16 +10,30 @@ import firebase from 'firebase/compat/app';
 
 export class AppComponent {
   title = 'angular-fire-auth';
-  
+  username = "";
+  useremail = "";
+
   constructor(public auth: AngularFireAuth) {
   }
   login() {
     var x = this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    console.log(this) ;
-    //console.log(x) ;
+    /*
+    this.auth.user
+      .subscribe(
+        (result: any) => {
+          console.log('result', result)
+          console.log('user', this.auth.user.forEach.name)
+          //this.useremail = result.emails[0].value;
+        })
+        */
+     console.log('user', this.auth.user)  ;  
   }
+  
+
   logout() {
     this.auth.signOut();
   }
 
 }
+
+
